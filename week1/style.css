@@ -208,31 +208,6 @@ main {
   }
 }
 
-@media (max-width: 1023px) {
-  .sideBar {
-    flex: none;
-  }
-  .sideBar__wrapper {
-    position: absolute;
-    flex-direction: row;
-    top: 1rem;
-    left: 0;
-    width: min-content;
-    height: min-content;
-    background-color: #983b43;
-    box-shadow: none;
-    margin-left: 2rem;
-  }
-  .sideBar__wrapper > h4 {
-    display: none;
-  }
-  .sideBar__wrapper > button {
-    width: max-content;
-    background-color: white;
-    color: #983b43;
-  }
-}
-
 @media (max-width: 767px) {
   .burger {
     grid-template-columns: 1fr;
