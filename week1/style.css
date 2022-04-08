@@ -161,13 +161,13 @@ main {
   font-size: 2.5rem;
 }
 
-.cart__button_wrapper {
+.cart__button-wrapper {
   display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
-.cart__button_wrapper > button {
+.cart__button-wrapper > button {
   width: 8rem;
   border: 0;
   background-color: white;
@@ -176,7 +176,7 @@ main {
   border-radius: 0.5rem;
 }
 
-.cart__button_wrapper > button:hover {
+.cart__button-wrapper > button:hover {
   background-color: #983b43;
   outline: 2px solid #f0edeb;
   color: white;
