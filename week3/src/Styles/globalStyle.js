@@ -4,11 +4,18 @@ import { reset } from 'styled-reset';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
-  body, html {
+  @font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  #root, body, html {
     width: 100%;
     height: 100%;
 
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-family: "establishRetrosansOTF";
     font-size: 62.5%;
   }
 
