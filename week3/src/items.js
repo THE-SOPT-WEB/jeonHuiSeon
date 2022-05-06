@@ -15,4 +15,20 @@ export const items = [
     name: '스칼렛위치',
     src: 'https://blog.kakaocdn.net/dn/eB1WDK/btrkJ6mp0aY/jQKkhqqTHFRvAK6P6Cy6o0/img.gif',
   },
+  {
+    name: '블랙위도우',
+    src: 'http://file3.instiz.net/data/file3/2018/01/29/a/9/0/a906051ef98dffd673394018eed4d1b1.gif',
+  },
+  {
+    name: '토르',
+    src: 'http://file3.instiz.net/data/file3/2018/06/19/6/e/d/6ed8c161b4486879219c4834a1661655.gif',
+  },
+  {
+    name: '스파이더맨',
+    src: 'https://thumbs.gfycat.com/IllegalLazyBronco-size_restricted.gif',
+  },
+  {
+    name: '호크아이',
+    src: 'http://file3.instiz.net/data/file3/2019/03/21/5/4/5/545a98609d7b619dbbcf8baf6970659a.gif',
+  },
 ];
