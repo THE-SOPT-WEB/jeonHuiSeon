@@ -1,28 +1,32 @@
 import { items } from 'items';
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { theme } from 'styles/theme';
 
 function ItemSelector() {
   const navigate = useNavigate();
-  const [winners, setWinners] = useState([]);
-  const [matchList, setMatchList] = useState(items.sort(() => Math.random() - 0.5));
+  const winners = useRef([]);
+  const [matchList, setMatchList] = useState([{}]);
 
   useEffect(() => {
-    console.log(winners.length);
+    setMatchList([...items.sort(() => Math.random() - 0.5)]);
+  }, []);
+
+  useEffect(() => {
     if (matchList.length === 0) {
-      if (winners.length === 1) {
-        navigate('/end', { state: { winner: { ...winners[0] } } });
+      if (winners.current.length === 1) {
+        navigate('/end', { state: { winner: { ...winners.current[0] } } });
       }
-      setMatchList([...winners]);
-      setWinners([]);
+      setMatchList([...winners.current]);
+      winners.current = [];
     }
   }, [matchList]);
 
   const handleClick = (winner) => {
-    setWinners([...winners, winner]);
-    setMatchList(matchList.splice(2, 2));
+    winners.current.push(winner);
+    matchList.splice(0, 2);
+    setMatchList([...matchList]);
   };
 
   return (
@@ -64,10 +68,16 @@ const StyledItem = styled.article`
   height: 100%;
   background-image: url(${({ currentMatch }) => currentMatch});
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 50%;
   background-position: center;
   /* background-color: black; */
   cursor: pointer;
+
+  &:hover {
+    background-size: 120% 70%;
+    flex: 1.5;
+    transition: background-size 0.7s ease, flex 0.7s ease;
+  }
 
   & > span {
     width: 100%;
