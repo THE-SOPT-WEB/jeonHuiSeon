@@ -1,6 +1,6 @@
-import End from 'Pages/End';
-import Game from 'Pages/Game';
-import Main from 'Pages/Main';
+import End from 'pages/End';
+import Game from 'pages/Game';
+import Main from 'pages/Main';
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
