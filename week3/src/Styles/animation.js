@@ -1,4 +1,4 @@
-const { keyframes } = require('styled-components');
+import { keyframes } from 'styled-components';
 
 export const turn = keyframes`
   0% {
