@@ -1,8 +1,6 @@
-// import useGeo from 'hooks/useGeo';
-import Card from 'components/Card';
 import Result from 'components/Result';
-import useGeo from 'hooks/useGeo';
 import { client } from 'lib/api';
+import useGeo from 'lib/useGeo';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from 'styles/theme';
