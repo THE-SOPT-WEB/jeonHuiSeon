@@ -51,6 +51,7 @@ const StyledP = styled.p`
 const StyledUl = styled.ul`
   width: 100%;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   margin: 2rem 0;
