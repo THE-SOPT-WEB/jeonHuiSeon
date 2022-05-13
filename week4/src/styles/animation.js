@@ -1,10 +1,11 @@
 import { keyframes } from 'styled-components';
 
-export const turn = keyframes`
+export const trans = keyframes`
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
+  50%,
   100% {
-    transform: rotate(360deg);
+    transform: translateX(150px);
   }
 `;

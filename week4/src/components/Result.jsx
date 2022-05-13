@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { turn } from 'styles/animation';
 
 import Card from './Card';
+import Skeleton from './Skeleton';
 
 function Result({ result }) {
   const { resultList, state } = result;
@@ -10,7 +11,14 @@ function Result({ result }) {
     case 'idle':
       return <StyledP state={state}>검색하세요</StyledP>;
     case 'pending':
-      return <StyledLoading state={state}>🍜</StyledLoading>;
+      return (
+        <StyledUl>
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+          <Skeleton />
+        </StyledUl>
+      );
     case 'resolved':
       return resultList.length === 0 ? (
         <StyledP state={state}>없ㅋ</StyledP>
@@ -38,14 +46,6 @@ const StyledP = styled.p`
   flex: 1;
   font-size: ${({ state }) => (state === 'idle' ? '5rem' : '10rem')};
   color: white;
-`;
-
-const StyledLoading = styled.p`
-  display: flex;
-  align-items: center;
-  flex: 1;
-  font-size: 10rem;
-  animation: ${turn} 1s infinite;
 `;
 
 const StyledUl = styled.ul`
