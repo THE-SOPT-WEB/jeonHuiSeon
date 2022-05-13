@@ -18,7 +18,7 @@ function Main() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault;
+    e.preventDefault();
     setResult({ ...result, state: 'pending' });
     if (isChecked) {
       const { x, y } = await useGeo();
@@ -49,7 +49,7 @@ function Main() {
           <label>지역기반으로 검색</label>
           <input type="checkbox" onChange={toggle} />
         </StyledCheckWrapper>
-        <StyledInputWrapper>
+        <StyledInputWrapper onSubmit={handleSubmit}>
           <label>우리동네는 바로여기</label>
           <input
             type="text"
@@ -57,7 +57,6 @@ function Main() {
             onChange={handleChange}
             placeholder="동네를 입력해 주세요"
             disabled={isChecked}
-            onSubmit={handleSubmit}
           />
         </StyledInputWrapper>
         <button onClick={handleSubmit}>검색</button>
