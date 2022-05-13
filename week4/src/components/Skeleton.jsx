@@ -6,7 +6,6 @@ import { theme } from 'styles/theme';
 function Skeleton() {
   return (
     <StyledRoot>
-      {/* <StyledBar /> */}
       <h2 />
       <StyledWrapper>
         <div />
